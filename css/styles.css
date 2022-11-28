@@ -8,7 +8,7 @@
 }
 
 body {
-  font-family: 'Roboto', sans-serif, system-ui;
+  font-family: "Roboto", sans-serif, system-ui;
   background-color: var(--primary-background-color);
   color: var(--primary-text-color);
   font-style: normal;
@@ -74,7 +74,7 @@ p {
   align-items: center;
 }
 .logo-link {
-  font-family: 'Raleway', sans-serif;
+  font-family: "Raleway", sans-serif;
   font-style: normal;
   font-weight: 700;
   font-size: 26px;
@@ -160,7 +160,7 @@ p {
   bottom: 0;
   left: 0;
 
-  content: '';
+  content: "";
   width: 100%;
   height: 4px;
 
@@ -201,7 +201,11 @@ p {
   margin-left: auto;
   margin-right: auto;
 
-  background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+  background-image: linear-gradient(
+      to right,
+      rgba(47, 48, 58, 0.4),
+      rgba(47, 48, 58, 0.4)
+    ),
     url(../images/img_hero.jpg);
   background-size: cover;
   background-repeat: no-repeat;
@@ -264,6 +268,7 @@ p {
   min-height: 581px;
   top: 50%;
   left: 50%;
+  padding: 40px;
   transform: translate(-50%, -50%) scaleY(1);
   background: var(--primary-background-color);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
@@ -271,6 +276,79 @@ p {
   border-radius: 4px;
   transition: transform 500ms linear;
 }
+.modal-title {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.15;
+  text-align: center;
+  letter-spacing: 0.03em;
+  margin-bottom: 12px;
+
+  color: #212121;
+}
+.modal-label {
+  display: block;
+  text-align: left;
+  margin-bottom: 4px;
+  margin-top: 10px;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.01em;
+  color: #757575;
+}
+.modal-label:nth-child(1) {
+  margin-top: 12px;
+}
+
+.modal-input {
+  width: 100%;
+  height: 40px;
+  border-radius: 4px;
+  outline: transparent;
+  padding-left: 42px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+
+  /* background-color: transparent; */
+}
+/* .modal-input:valid {
+  background-color: rgba(87, 112, 93, 0.247);
+}
+.modal-input:invalid {
+  background-color: rgba(201, 161, 151, 0.192);
+} */
+.btn-submit {
+  width: 200px;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.88;
+  text-align: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
+
+  margin-top: 30px;
+
+  background: #2196f3;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  color: var(--additional-text-color);
+  border-color: var(--accent-color);
+}
+.modal-input:hover,
+.modal-input:focus {
+  background: #ffffff;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  border: 1px solid #2196f3;
+  border-color: #2196f3;
+}
+.modal-input:focus + .modal-icon,
+.modal-input:hover + .modal-icon {
+  fill: var(--accent-color);
+}
+
 .btn-modal {
   position: absolute;
   top: 8px;
@@ -281,12 +359,13 @@ p {
   justify-content: center;
   align-items: center;
   cursor: pointer;
+
   color: #212121;
   border-radius: 50%;
-  border: 1px solid rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(0, 0, 0, 0.1);
   background: var(--primary-background-color);
-  transition: background-color var(--timing-function), color var(--timing-function),
-    border var(--timing-function);
+  transition: background-color var(--timing-function),
+    color var(--timing-function), border var(--timing-function);
 }
 .backdrop.is-hidden .modal {
   transform: translate(-50%, -50%) scale(0.5);
@@ -299,9 +378,60 @@ p {
 .btn-modal:hover,
 .btn-modal:focus {
   color: #2196f3;
-  border: 1px solid #2196f3;
+  /* border: 1px solid #2196f3; */
   transition: color var(--timing-function);
 }
+.input-wrapper {
+  position: relative;
+}
+.modal-icon {
+  position: absolute;
+  left: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.modal-comment {
+  width: 100%;
+  height: 120px;
+  margin: 0px;
+  padding: 16px 12px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  resize: none;
+}
+.modal-comment:hover,
+.modal-comment:focus {
+  background: #ffffff;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  border: 1px solid #2196f3;
+  border-color: #2196f3;
+  outline: #2196f3;
+}
+.modal-option {
+  margin-top: 20px;
+}
+.modal-option-doc {
+  position: relative;
+}
+.document {
+  color: var(--accent-color);
+  font-weight: 400;
+}
+.document::after {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 1px;
+  /* display: inline-block; */
+
+  border: 1px solid #2196f3;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
 /*----- Приховування модального вікна ----- */
 .backdrop.is-hidden {
   opacity: 0;
@@ -325,7 +455,7 @@ p {
   display: inline-block;
   width: 270px;
   height: 120px;
-  content: '';
+  content: "";
   background-size: 70px 70px;
   background-position: center;
   background-repeat: no-repeat;
@@ -460,7 +590,8 @@ p {
   justify-content: center;
   color: #afb1b8;
 
-  transition: background-color 250ms var(--timing-function), color 250ms var(--timing-function);
+  transition: background-color 250ms var(--timing-function),
+    color 250ms var(--timing-function);
 }
 
 .actions-item-icon {
@@ -471,7 +602,6 @@ p {
 .actions-item-link:focus {
   background-color: var(--accent-color);
   color: var(--additional-text-color);
-  
 }
 
 /* --------Ceкція постійні клієнти------- */
@@ -497,7 +627,7 @@ p {
   color: #afb1b8;
   fill: #afb1b8;
   transition: color 500ms var(--timing-function),
-              border 250ms var(--timing-function);
+    border 250ms var(--timing-function);
 }
 
 .company-link:hover {
@@ -564,7 +694,60 @@ p {
 .actions-item-link.footer:focus {
   background: var(--accent-color);
 }
+.email-input-title {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  color: #ffffff;
+}
+.email-input-footer {
+  min-width: 358px;
+  height: 50px;
+  background-color: inherit;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  border-radius: 4px;
+  padding-left: 16px;
+}
+.footer-input{
+  position: relative;
+}
+.email-input-form{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+}
+.btn-submit-footer {
+display: flex;
+justify-content: center;
+  align-items: center;
+  gap: 10px;
+  width: 200px;
+  height: 50px;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.88;
+  text-align: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color: var(--accent-color);
+  color: var(--additional-text-color);
+  background: #2196f3;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  border-color: var(--accent-color);
+  letter-spacing: 0.06em;
+ }
 
+ .footer-send-icon{
+ 
+   
+  
+ }
 /*---------------портфоліо----------- */
 .portfolio-work {
   background: var(--primary-background-color);
@@ -598,7 +781,8 @@ p {
   cursor: pointer;
   text-align: center;
 
-  transition: color 250ms var(--timing-function), background 250ms var(--timing-function);
+  transition: color 250ms var(--timing-function),
+    background 250ms var(--timing-function);
 }
 .portfolio-btn:hover,
 .portfolio-btn:focus {
