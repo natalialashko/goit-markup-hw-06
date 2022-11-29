@@ -310,31 +310,8 @@ p {
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
 
-  /* background-color: transparent; */
 }
-/* .modal-input:valid {
-  background-color: rgba(87, 112, 93, 0.247);
-}
-.modal-input:invalid {
-  background-color: rgba(201, 161, 151, 0.192);
-} */
-.btn-submit {
-  width: 200px;
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 1.88;
-  text-align: center;
-  padding-top: 10px;
-  padding-bottom: 10px;
 
-  margin-top: 30px;
-
-  background: #2196f3;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-  border-radius: 4px;
-  color: var(--additional-text-color);
-  border-color: var(--accent-color);
-}
 .modal-input:hover,
 .modal-input:focus {
   background: #ffffff;
@@ -378,7 +355,7 @@ p {
 .btn-modal:hover,
 .btn-modal:focus {
   color: #2196f3;
-  /* border: 1px solid #2196f3; */
+ 
   transition: color var(--timing-function);
 }
 .input-wrapper {
@@ -398,6 +375,7 @@ p {
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
   resize: none;
+ 
 }
 .modal-comment:hover,
 .modal-comment:focus {
@@ -409,29 +387,87 @@ p {
   border-color: #2196f3;
   outline: #2196f3;
 }
-.modal-option {
+.checkbox-label {
+  display: flex;
   margin-top: 20px;
+  align-items: center;
+  gap: 7px;
+}
+.checkbox {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+.checkbox-icon {
+  display: inline-block;
+  width: 16px;
+  height: 15px;
+
+  border: 1px solid #212121;
+}
+
+.checkbox + span {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+  color: #757575;
 }
 .modal-option-doc {
   position: relative;
 }
+
 .document {
   color: var(--accent-color);
-  font-weight: 400;
 }
 .document::after {
   position: absolute;
   content: "";
-  width: 100%;
-  height: 1px;
-  /* display: inline-block; */
-
-  border: 1px solid #2196f3;
-  position: absolute;
   bottom: 0;
   left: 0;
+  width: 100%;
+  height: 1px;
+  border: 1px solid var(--accent-color);
+  background-color: var(--accent-color);
 }
 
+.checkbox:checked + .checkbox-icon {
+  background-color: var(--accent-color);
+  background-image: url(../images/icon-check.svg);
+  background-size: contain;
+  background-origin: border-box;
+  border-color: var(--accent-color);
+}
+.btn-submit {
+  width: 200px;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.88;
+  text-align: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  cursor: pointer;
+  margin-top: 30px;
+
+  background: var(--accent-color);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  color: var(--additional-text-color);
+  border-color: var(--accent-color);
+  transition: background var(--timing-function);
+}
+.btn-submit:hover,
+.btn-submit:focus{
+  background: #188CE8;
+   
+}
 /*----- Приховування модального вікна ----- */
 .backdrop.is-hidden {
   opacity: 0;
@@ -712,18 +748,18 @@ p {
   border-radius: 4px;
   padding-left: 16px;
 }
-.footer-input{
+.footer-input {
   position: relative;
 }
-.email-input-form{
+.email-input-form {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 12px;
 }
 .btn-submit-footer {
-display: flex;
-justify-content: center;
+  display: flex;
+  justify-content: center;
   align-items: center;
   gap: 10px;
   width: 200px;
@@ -741,13 +777,12 @@ justify-content: center;
   border-radius: 4px;
   border-color: var(--accent-color);
   letter-spacing: 0.06em;
- }
+  cursor: pointer;
+}
+.email-input{
+  margin-left: auto;
+}
 
- .footer-send-icon{
- 
-   
-  
- }
 /*---------------портфоліо----------- */
 .portfolio-work {
   background: var(--primary-background-color);

@@ -132,19 +132,16 @@
                   class="modal-comment"
                   placeholder="Введіть текст"
                 ></textarea>
-                <div class="modal-option">
-                  <input
-                    type="checkbox"
-                    name="modal-option"
-                    id="modal-option"
-                  />
-                  <label for="modal-option" class="modal-document"
-                    >Погоджуюся з розсилкою та приймаю
-                    <span class="modal-option-doc">
-                      <strong class="document"> Умови договору</strong>
-                    </span>
-                  </label>
-                </div>
+                <label class="checkbox-label">
+                  <input type="checkbox" name="topic" class="checkbox" />
+                  <span class="checkbox-icon"></span>
+                  <span class="checkbox-text"
+                    >Погоджуюся з розсилкою та приймаю</span
+                  >
+                  <a class="modal-option-doc" href="./">
+                    <span class="document"> Умови договору</span>
+                  </a>
+                </label>
                 <button type="submit" class="btn-submit">Відправити</button>
               </form>
             </div>
@@ -505,6 +502,7 @@
             </li>
           </ul>
         </div>
+
         <div class="email-input">
           <p class="email-input-title">Підпишіться на розсилку</p>
           <form class="email-input-form">
@@ -514,14 +512,12 @@
               name="user-name"
               placeholder="E-mail"
             />
-            <div class="submit-footer">
-              <button type="submit" class="btn-submit-footer">
-                <span>Підписатися</span>
-                <svg class="footer-send-icon" width="24" height="24">
-                  <use href="./images/icons.svg#icon-send"></use>
-                </svg>
-              </button>
-            </div>
+            <button type="submit" class="btn-submit-footer">
+              <span>Підписатися</span>
+              <svg class="footer-send-icon" width="24" height="24">
+                <use href="./images/icons.svg#icon-send"></use>
+              </svg>
+            </button>
           </form>
         </div>
       </div>
