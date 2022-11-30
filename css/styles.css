@@ -431,6 +431,8 @@ p {
 
 .document {
   color: var(--accent-color);
+  font-size: 14px;
+  line-height: 1.71;
 }
 .document::after {
   position: absolute;
