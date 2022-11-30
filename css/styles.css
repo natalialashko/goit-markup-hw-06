@@ -404,6 +404,11 @@ p {
   clip-path: inset(100%);
   clip: rect(0 0 0 0);
   overflow: hidden;
+  
+}
+.checkbox-label{
+  display: flex;
+  justify-content: center;
 }
 .checkbox-icon {
   display: inline-block;
@@ -413,7 +418,7 @@ p {
   border: 1px solid #212121;
 }
 
-.checkbox + span {
+.checkbox-text {
   font-weight: 400;
   font-size: 14px;
   line-height: 1.71;
@@ -442,6 +447,7 @@ p {
   background-color: var(--accent-color);
   background-image: url(../images/icon-check.svg);
   background-size: contain;
+  background-repeat: no-repeat;
   background-origin: border-box;
   border-color: var(--accent-color);
 }
